@@ -1,5 +1,11 @@
 <p>hola desde Angular soy {{nombre}} v2</p>
-<p style="text-align: center;">{{contador}}</p>
-
+<p>{{contador}}</p>
+<!-- Eventos click especiales de Angular -->
 <input type="button" value="+" (click)="incrementar()" />
 <input type="button" value="-" (click)="decrementar()" />
+<p>
+    <span>{{libro.isbn}}</span>
+    <span>{{libro.titulo}}</span>
+    <span>{{libro.autor}}</span>
+</p>
+<img [src]="paisaje_var" style="width: 30%;" />

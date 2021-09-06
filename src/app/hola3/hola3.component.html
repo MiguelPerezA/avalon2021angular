@@ -1,0 +1,27 @@
+<h1>Componente Hola 3!!</h1>
+<p *ngFor="let libro of listaLibros">
+    {{libro.isbn}}-{{libro.titulo}}-{{libro.autor}}
+</p>
+<table id="tablaDatos">
+    <tr>
+        <th>Indice</th>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+    </tr>
+    <!-- Directivas estructurales con *, permite añadir o eliminar elementos -->
+    <tr *ngFor="let libro of listaLibros;let indice=index;let par=even;let impar=odd" [ngClass]="{azul:par,verde:impar}">
+        <td>
+            {{indice}}
+        </td>
+        <td>
+            {{libro.isbn}}
+        </td>
+        <td>
+            {{libro.titulo}}
+        </td>
+        <td>
+            {{libro.autor}}
+        </td>
+    </tr>
+</table>
