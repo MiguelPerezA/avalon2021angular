@@ -9,7 +9,7 @@ export class Hola1Component implements OnInit {
 
   nombre:string="Miguel";
   contador:number=0;
-
+ 
   constructor() { }
 
   ngOnInit(): void {
