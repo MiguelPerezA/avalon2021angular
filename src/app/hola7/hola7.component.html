@@ -1,0 +1,61 @@
+<hr style="border: 1px solid black;">
+<h3>Datos</h3>
+<table id="tablaDatos">
+    <tr>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Acciones</th>
+    </tr>
+    <!-- Directivas estructurales con *, permite añadir o eliminar elementos -->
+    <tr *ngFor="let libro of listaLibros;">
+        <td>
+            {{libro.isbn}}
+        </td>
+        <td>
+            {{libro.titulo}}
+        </td>
+        <td>
+            {{libro.autor}}
+        </td>
+        <td>
+            <input type="button" value="Borrar" (click)="borrarLibro(libro)" />
+        </td>
+        <td>
+            <input type="button" value="Detalle" (click)="detalleLibro(libro)" />
+        </td>
+        <!--  Botones antiguos
+           <td>
+            <input type="button" value="Borrar" (click)="borrar(libro.isbn)" />
+        </td>
+        <td>
+            <input type="button" value="Detalle" (click)="detalle(libro.isbn)" />
+        </td> -->
+    </tr>
+</table>
+<hr style="border: 1px solid black;">
+<h3>Formulario Insertar</h3>
+<form>
+
+    <p>
+        <input type="text" name="isbn" placeholder="isbn" [(ngModel)]="libroNuevo.isbn" />
+    </p>
+    <p>
+        <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="libroNuevo.titulo" />
+    </p>
+    <p>
+        <input type="text" name="autor" placeholder="autor" [(ngModel)]="libroNuevo.autor" />
+    </p>
+    <p>
+        <input type="button" value="Insertar" (click)="insertarLibro()">
+    </p>
+</form>
+<hr style="border: 1px solid black;">
+
+<h3>Detalle:</h3>
+<div>
+    <p>{{libroSeleccionado.isbn}}</p>
+    <p>{{libroSeleccionado.titulo}}</p>
+    <p>{{libroSeleccionado.autor}}</p>
+</div>
+<hr style="border: 1px solid black;">

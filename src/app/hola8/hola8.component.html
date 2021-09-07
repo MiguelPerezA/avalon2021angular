@@ -1,0 +1,23 @@
+<hr style="border: 1px solid black;" />
+<h3>Datos</h3>
+<table id="tablaDatos">
+    <tr>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Acciones</th>
+    </tr>
+    <!-- Directivas estructurales con *, permite añadir o eliminar elementos -->
+    <tr *ngFor="let libro of listaLibros;">
+        <td>
+            {{libro.isbn}}
+        </td>
+        <td>
+            {{libro.titulo}}
+        </td>
+        <td>
+            {{libro.autor}}
+        </td>
+    </tr>
+</table>
+<hr style="border: 1px solid black;" />

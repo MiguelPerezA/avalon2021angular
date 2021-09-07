@@ -1,6 +1,6 @@
 export class Libro {
 
-    isbn:string="";
+    /*isbn:string="";
     titulo:string="";
     autor:string="";
 
@@ -8,5 +8,9 @@ export class Libro {
         this.isbn=isbn;
         this.titulo=titulo;
         this.autor=autor;
+    }*/
+
+    constructor(public isbn:string,public titulo?:string,public autor?:string){
+        
     }
 }

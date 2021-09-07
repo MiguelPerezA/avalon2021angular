@@ -1,0 +1,5 @@
+<input type="text" placeholder="isbn" [(ngModel)]="libro.isbn" /><br>
+<input type="text" placeholder="titulo" [(ngModel)]="libro.titulo" /><br>
+<input type="text" placeholder="autor" [(ngModel)]="libro.autor" /><br>
+<input type="button" value="Mostrar/Ocultar" (click)="generarLibro()">
+<p *ngIf="show">{{libro.isbn}}-{{libro.titulo}}-{{libro.autor}}</p>
