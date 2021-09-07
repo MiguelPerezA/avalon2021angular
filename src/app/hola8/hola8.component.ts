@@ -20,4 +20,10 @@ export class Hola8Component implements OnInit {
     });
   }
 
+  borrarLibro(libro:Libro):void{
+    
+    this.servicio.borrarLibro(libro);
+ 
+  }
+
 }

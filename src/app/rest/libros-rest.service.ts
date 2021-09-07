@@ -12,4 +12,12 @@ export class LibrosRestService {
   buscarTodos():Promise<Libro[]>{
     return this.http.get<Libro[]>("http://localhost:8084/libros").toPromise();
   }
+
+  borrarLibro(libro:Libro):Promise<Libro>{
+
+    return this.http.delete<Libro>(`http://localhost:8084/libros/${libro.isbn}`).toPromise();
+  }
+
+
+
 }

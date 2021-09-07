@@ -16,6 +16,15 @@ app.get('/', (req, res) => {
 app.get('/libros', (req, res) => {
     res.send(listaLibros);
 })
+app.delete('/libros/:isbn', (req, res) => {
+    let libroBorrar = listaLibros.filter(function(elem) {
+        return elem.isbn == req.params.isbn;
+    })[0];
+
+    let posicion = listaLibros.indexOf(libroBorrar);
+
+    listaLibros.splice(posicion, 1);
+})
 
 app.listen(port, () => {
     console.log(`Node Corriendo en http://localhost:${port}`)
