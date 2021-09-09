@@ -1,0 +1,21 @@
+<div>
+    <h2>Formulario Insertar</h2>
+    <form>
+
+        <p>
+            <input type="text" name="isbn" placeholder="isbn" [(ngModel)]="libroNuevo.isbn" />
+        </p>
+        <p>
+            <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="libroNuevo.titulo" />
+        </p>
+        <p>
+            <input type="text" name="autor" placeholder="autor" [(ngModel)]="libroNuevo.autor" />
+        </p>
+        <p>
+            <input type="button" value="Insertar" (click)="insertarLibro()">
+        </p>
+    </form>
+    <!-- No se aconseja a poruque puedo llegar desde otra oagina que no sea listalibros mejor usar location -->
+    <!-- <a [routerLink]="['/listalibros']">Volver</a> -->
+    <input type="button" value="Volver" (click)="volver()">
+</div>

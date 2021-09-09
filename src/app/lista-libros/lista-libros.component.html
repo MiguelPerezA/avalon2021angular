@@ -1,0 +1,38 @@
+<h2>Datos</h2>
+<input type="text" name="filtroTitulo" placeholder="Filtro por Titulo" [(ngModel)]="filtroTitulo" (keyup)="teclaPulsada.next($event)" />
+<table id="tablaDatos">
+    <tr>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th colspan="3 ">Acciones</th>
+    </tr>
+    <!-- Directivas estructurales con *, permite añadir o eliminar elementos -->
+    <tr *ngFor="let libro of listaLibros;">
+        <td>
+            {{libro.isbn}}
+        </td>
+        <!-- LOS PIPE DENTRO DE ANGULAR 
+            SE PUEDEN UTILIZAR PARA EJECUTAR ALGUNAS FUNCIONES -->
+        <td>
+            {{libro.titulo | uppercase}}
+        </td>
+        <td>
+            {{libro.autor}}
+        </td>
+        <td>
+            <input type="button" value="Borrar" (click)="borrarLibro(libro)" />
+        </td>
+        <td>
+            <input type="button" value="Detalle" (click)="detalle(libro)" />
+        </td>
+        <td>
+            <input type="button" value="Editar" (click)="cargarEditLibro(libro)" />
+        </td>
+        <td>
+            {{100 | number :'2.2-3'}}-{{1.7852 | number :'2.2-3'}}
+        </td>
+    </tr>
+</table>
+<!-- <a [routerLink]="['/formularionuevo']">Añadir Nuevo</a> -->
+<input type="button" value="Añadir Nuevo" (click)="insertar()" />

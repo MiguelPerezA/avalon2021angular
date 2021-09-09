@@ -24,6 +24,8 @@ app.delete('/libros/:isbn', (req, res) => {
     let posicion = listaLibros.indexOf(libroBorrar);
 
     listaLibros.splice(posicion, 1);
+    //res.status(204).send();
+    res.sendStatus(204);
 })
 
 app.listen(port, () => {

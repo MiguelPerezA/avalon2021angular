@@ -1,11 +1,11 @@
-<hr style="border: 1px solid black;" />
-<h3>Datos</h3>
+<h2>Datos</h2>
+<input type="text" name="filtroTitulo" placeholder="Filtro por Titulo" [(ngModel)]="filtroTitulo" (keyup)="teclaPulsada.next($event)" />
 <table id="tablaDatos">
     <tr>
         <th>ISBN</th>
         <th>Titulo</th>
         <th>Autor</th>
-        <th>Acciones</th>
+        <th colspan="3">Acciones</th>
     </tr>
     <!-- Directivas estructurales con *, permite añadir o eliminar elementos -->
     <tr *ngFor="let libro of listaLibros;">
@@ -21,6 +21,55 @@
         <td>
             <input type="button" value="Borrar" (click)="borrarLibro(libro)" />
         </td>
+        <td>
+            <input type="button" value="Detalle" (click)="detalleLibro(libro)" />
+        </td>
+        <td>
+            <input type="button" value="Editar" (click)="cargarEditLibro(libro)" />
+        </td>
     </tr>
 </table>
-<hr style="border: 1px solid black;" />
+<div>
+    <h2>Formulario Insertar</h2>
+    <form>
+
+        <p>
+            <input type="text" name="isbn" placeholder="isbn" [(ngModel)]="libroNuevo.isbn" />
+        </p>
+        <p>
+            <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="libroNuevo.titulo" />
+        </p>
+        <p>
+            <input type="text" name="autor" placeholder="autor" [(ngModel)]="libroNuevo.autor" />
+        </p>
+        <p>
+            <input type="button" value="Insertar" (click)="insertarLibro()">
+        </p>
+    </form>
+</div>
+
+
+<div>
+    <h3>Detalles:</h3>
+    <p>{{libroSeleccionado.isbn}}</p>
+    <p>{{libroSeleccionado.titulo}}</p>
+    <p>{{libroSeleccionado.autor}}</p>
+</div>
+<div>
+    <h2>Formulario Editar</h2>
+    <form>
+
+        <p>
+            <input type="text" name="isbn" placeholder="isbn" [(ngModel)]="libroEdit.isbn" />
+        </p>
+        <p>
+            <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="libroEdit.titulo" />
+        </p>
+        <p>
+            <input type="text" name="autor" placeholder="autor" [(ngModel)]="libroEdit.autor" />
+        </p>
+        <p>
+            <input type="button" value="Guardar" (click)="editarLibro()">
+        </p>
+    </form>
+</div>

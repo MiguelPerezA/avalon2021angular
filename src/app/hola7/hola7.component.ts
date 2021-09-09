@@ -17,6 +17,8 @@ export class Hola7Component implements OnInit {
     this.listaLibros=[new Libro("1","Java","Pedro"),new Libro("2","Python","Pepe"),new Libro("3","php","Ana")];
 
    }*/
+   //Se declara propiedad a nivel interno llamada servicio
+   //Siendo una instancia de LibroService
    constructor(public servicio:LibrosService){
 
    }
