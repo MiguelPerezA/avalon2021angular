@@ -1,25 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Hola8Component } from './hola8.component';
+import { C2Component } from './c2.component';
 
-describe('Hola8Component', () => {
-  let component: Hola8Component;
-  let fixture: ComponentFixture<Hola8Component>;
+describe('C2Component', () => {
+  let component: C2Component;
+  let fixture: ComponentFixture<C2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Hola8Component ]
+      declarations: [ C2Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Hola8Component);
+    fixture = TestBed.createComponent(C2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  /* it('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
-  }); */
+  });
 });

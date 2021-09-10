@@ -17,6 +17,9 @@ import { ListaLibrosComponent } from './lista-libros/lista-libros.component';
 import { FormularioNuevoComponent } from './formulario-nuevo/formulario-nuevo.component';
 import { DetalleLibroComponent } from './detalle-libro/detalle-libro.component';
 import { EditarLibroComponent } from './editar-libro/editar-libro.component';
+import { C1Component } from './c1/c1.component';
+import { C2Component } from './c2/c2.component';
+import { HijoC2Component } from './hijo-c2/hijo-c2.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { EditarLibroComponent } from './editar-libro/editar-libro.component';
     ListaLibrosComponent,
     FormularioNuevoComponent,
     DetalleLibroComponent,
-    EditarLibroComponent
+    EditarLibroComponent,
+    C1Component,
+    C2Component,
+    HijoC2Component
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Hola8Component } from './hola8.component';
+import { HijoC2Component } from './hijo-c2.component';
 
-describe('Hola8Component', () => {
-  let component: Hola8Component;
-  let fixture: ComponentFixture<Hola8Component>;
+describe('HijoC2Component', () => {
+  let component: HijoC2Component;
+  let fixture: ComponentFixture<HijoC2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Hola8Component ]
+      declarations: [ HijoC2Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Hola8Component);
+    fixture = TestBed.createComponent(HijoC2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  /* it('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
-  }); */
+  });
 });

@@ -1,0 +1,4 @@
+<p>{{mensaje}}</p>
+<!-- <app-hijo-c2 [mensajeExterno]="'hola dsde c2 a hijo'"></app-hijo-c2> -->
+<!-- Referenciando una variable del .ts -->
+<app-hijo-c2 [mensajeExterno]="mensajeHijo" (eventoMensaje)="mensajeAlerta($event)"></app-hijo-c2>
